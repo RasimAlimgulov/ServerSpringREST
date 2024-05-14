@@ -32,10 +32,5 @@ public class MyRestController {
      }
     return dancer;
     }
-    @ExceptionHandler
-    public ResponseEntity<DancerIncorrectData> handleException(NoSuchEmployeeException exception){
-         DancerIncorrectData dancerIncorrectData=new DancerIncorrectData();
-         dancerIncorrectData.setInfo(exception.getMessage());
-         return new ResponseEntity<>(dancerIncorrectData, HttpStatus.NOT_FOUND);
-    }
+
 }
